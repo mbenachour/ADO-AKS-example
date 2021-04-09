@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: mbenachouradoaksexample 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mbenachouradoaksexample
+  template:
+    metadata:
+      labels:
+        app: mbenachouradoaksexample 
+    spec:
+      containers:
+        - name: mbenachouradoaksexample 
+          image: mbenachourregistry.azurecr.io/mbenachouradoaksexample
+          ports:
+          - containerPort: 8080
