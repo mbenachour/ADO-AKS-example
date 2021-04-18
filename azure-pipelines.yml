@@ -28,7 +28,7 @@ stages:
   jobs:
   - job: Build
     displayName: Build
-    pool: default
+    pool: Default
       #vmImage: $(vmImageName)
     steps:
     - task: Docker@2
@@ -51,8 +51,8 @@ stages:
   jobs:
   - deployment: Deploy
     displayName: Deploy
-    pool:
-      vmImage: $(vmImageName)
+    pool: Default
+      #vmImage: $(vmImageName)
     environment: 'mbenachourADOAKSexample-2062.default'
     strategy:
       runOnce:
